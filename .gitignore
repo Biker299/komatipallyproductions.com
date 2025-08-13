@@ -1,0 +1,7 @@
+# Local artifacts
+.server.log
+.DS_Store
+node_modules/
+dist/
+.cache/
+.env

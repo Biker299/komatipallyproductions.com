@@ -138,10 +138,10 @@ class LocalFileServer {
     final html = StringBuffer()
       ..writeln('<!doctype html>')
       ..writeln('<html><head><meta name="viewport" content="width=device-width, initial-scale=1" />')
-      ..writeln('<title>XShare Session</title>')
+      ..writeln('<title>SAR SHARE Session</title>')
       ..writeln('<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;padding:16px;line-height:1.5;} .file{margin:8px 0;} .name{font-weight:600;} .size{color:#666;font-size:0.9em;}</style>')
       ..writeln('</head><body>')
-      ..writeln('<h2>Files</h2>');
+      ..writeln('<h2>SAR SHARE — Files</h2>');
 
     for (final sf in _files) {
       final size = _formatBytes(sf.sizeBytes);
@@ -192,7 +192,7 @@ class LocalFileServer {
       req.response.statusCode = 200;
       req.response.headers.set(HttpHeaders.contentTypeHeader, mime);
       req.response.headers.set(HttpHeaders.contentLengthHeader, sf.sizeBytes);
-      req.response.headers.set(HttpHeaders.contentDispositionHeader, 'attachment; filename="${_sanitizeHeaderFilename(sf.displayName)}"');
+      req.response.headers.set('Content-Disposition', 'attachment; filename="${_sanitizeHeaderFilename(sf.displayName)}"');
       await req.response.close();
       return;
     }
@@ -206,7 +206,7 @@ class LocalFileServer {
     req.response.statusCode = 200;
     req.response.headers.set(HttpHeaders.contentTypeHeader, mime);
     req.response.headers.set(HttpHeaders.contentLengthHeader, sf.sizeBytes);
-    req.response.headers.set(HttpHeaders.contentDispositionHeader, 'attachment; filename="${_sanitizeHeaderFilename(sf.displayName)}"');
+    req.response.headers.set('Content-Disposition', 'attachment; filename="${_sanitizeHeaderFilename(sf.displayName)}"');
 
     final stream = file.openRead();
     await req.response.addStream(stream);

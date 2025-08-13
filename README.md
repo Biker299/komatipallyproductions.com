@@ -1,6 +1,6 @@
-# XShare — Lossless Photo/Video Transfer (iOS & Android)
+# SAR SHARE — Lossless Photo/Video Transfer (iOS & Android)
 
-XShare is a simple, privacy-friendly app that lets you send original photos and videos between iPhone and Android with zero quality loss. It runs a local HTTP server on the sender device and the receiver downloads the original files over the same Wi‑Fi network. Pairing is done via a QR code or by pasting a link.
+SAR SHARE is a simple, privacy-friendly app that lets you send original photos and videos between iPhone and Android with zero quality loss. It runs a local HTTP server on the sender device and the receiver downloads the original files over the same Wi‑Fi network. Pairing is done via a QR code or by pasting a link.
 
 ## Highlights
 - Original files only — no compression, no re-encoding

@@ -6,16 +6,16 @@ import 'ui/receive_page.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(const XShareApp());
+  runApp(const SarShareApp());
 }
 
-class XShareApp extends StatelessWidget {
-  const XShareApp({super.key});
+class SarShareApp extends StatelessWidget {
+  const SarShareApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'XShare',
+      title: 'SAR SHARE',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
@@ -57,7 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('XShare'),
+        title: const Text('SAR SHARE'),
       ),
       body: pages[_tabIndex],
       bottomNavigationBar: NavigationBar(
